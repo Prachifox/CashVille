@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+    <!-- Import Google Icon Font -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Import materialize.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+ 
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    
+    <style type="text/css">
+    .section-follow .fa-4x {
+  margin: 10px 20px;
+}
+    
+    </style>
+    
+    
+    <title>CashVille</title>
+    <!-- Let browser know website is optimized for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+
+    <div class="navbar-fixed">
+      <nav class=" grey darken-3">
+      <div class="container"></div>
+          <div class="nav-wrapper">
+            <a href="#" class="brand-logo">CashVille</a>
+            <a href="#" class="sidenav-trigger show-on-large right" data-target="mobile-nav">
+              <i class="material-icons">menu</i>
+            </a>
+           
+            <ul class="right hide-on-med-and-down ">
+           
+                <li><a href="home_cus.jsp">Available Products</a></li>
+      <li><a href="placeorder.html">Place Order</a></li>
+       <li><a href="feedback.html">Feedbacks</a></li>
+      <li><a href="reset_pass_1.html">Reset Password</a></li>
+        <li><a href="index.html">Logout</a></li>
+           
+            </ul>
+              
+        </div>
+        </div>
+      </nav>
+    </div>
+
+
+  
+    <ul class="sidenav grey lighten-2" id="mobile-nav">
+ <li>   <div class="user-view">
+    <div class=" background grey darken-3"></div>
+      <a href="#">
+          <img src="images/person2.jpg" alt="" class="circle">
+        </a>
+        <a href="#" class="name white-text">
+          Customer
+        </a>
+      
+    </div></li>
+    
+                <li><a href="home_cus.jsp">Available Products</a></li>
+      <li><a href="placeorder.html">Place Order</a></li>
+       <li><a href="feedback.html">Feedbacks</a></li>
+      <li><a href="reset_pass_1.html">Reset Password</a></li>
+        <li><a href="index.html">Logout</a></li>
+    </ul>
+  <section>
+  
+  
+ <div class="row grey lighten-1">
+      <div class="col s12">
+        <!-- HORIZONTAL CARD -->
+        <div class="card horizontal grey lighten-4">
+          <div class="card-image">
+            <img src="images/placeorder.jpg">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <span class="card-title ">  <center> <div class="black-text"><h1><span class="grey-text">Happy</span> Shopping</h1><br></center>
+            <center>  <i class="fa fa-grin-beam large"></i></center></span>
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
+ <section >
+ <br>
+ <br>
+  <h4 class="center">
+                <span class="grey-text">Place  </span>Order
+              </h4>
+              <br>
+ <div class="container  z-depth-5">
+              <div class="row">
+              <div class="col s12 m8 offset-m2">
+    <form action="placeo" name="Form" method="post" onsubmit="return validate()">
+        <!-- TEXT FIELD --><br>
+        <div class="input-field">
+          <input id="ProductItem" type="text" name="ProductItem" placeholder="Product Name( CASE SENSITIVE )" /> <label for="ProductItem">ProductName</label>
+        </div>
+          <div class="input-field">
+          <input id="Quantity" type="number" name="Quantity" placeholder="Quantity" /> <label for="Quantity">Quantity</label>
+        </div>
+        
+        <div class="input-field">
+          <i class="material-icons prefix">phone</i>
+          <input id="phone" type="tel" name="no"/>
+          <label for="phone">Phone Number</label>
+        </div>
+        
+         <div class="input-field">
+          <input id="d_add" type="text" name="d_add" placeholder="Delivery Address" /> <label for="d_add">Delivery Address</label>
+        </div>
+        
+         <div class="input-field">
+          <input placeholder="Email" id="email" type="email" class="validate" name="email"/>
+          <label data-error="Invalid" data-success="Valid" for="email"
+            >Email</label
+          >
+        </div>
+        
+       <center> <input type="submit" value="Buy Now" class="btn large"></center> </div>	
+         
+        </form>
+       <br>
+          <br>
+	</div>
+	</div>
+</section>
+
+<section>
+<center>
+<p class="flow-text black-text">CashVille &copy; 2018
+</p>
+</center>
+</section>
+ </footer>  
+            
+         
+
+ 
+    <!-- JavaScript at end of body for optimized loading -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+   
+ 
+
+   
+    <script>
+
+    function validate()
+    {
+  	  var a=document.forms["Form"]["ProductItem"].value;
+        var b=document.forms["Form"]["Quantity"].value;
+        var c=document.forms["Form"]["no"].value;
+        var d=document.forms["Form"]["d_add"].value;
+        var e=document.forms["Form"]["email"].value;
+        if (a==""|| b=="" || c=="" || d==""||e=="")
+        {
+            alert("Please Fill All Required Field");
+            return false;
+        }
+       
+        return true;
+    }
+
+      const sideNav = document.querySelector('.sidenav');
+      M.Sidenav.init(sideNav, {});
+
+      //slider
+      const slider = document.querySelector('.slider');
+      M.Slider.init(slider, {
+        indicators: false,
+        height: 600,
+        transition: 500,
+        interval: 5000
+      });
+
+      //autocomplete
+      const autocomplete = document.querySelector('.autocomplete');
+      M.Autocomplete.init(autocomplete, {
+        data: {
+          Gambia: null,
+          Kenya: null,
+          Tanzania: null,
+          Antarctica: null,
+          Aruta: null,
+          Florida: null,
+          California: null,
+          Europe: null
+        }
+      
+      
+      });
+    </script>
+ 
+
+     </body>
+</html>

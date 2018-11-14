@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+    <!-- Import Google Icon Font -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Import materialize.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    
+    <style type="text/css">
+    .section-follow .fa-4x {
+  margin: 10px 20px;
+}
+
+ .jk
+{
+margin-left:300px;    
+margin-right:300px;}
+    
+    </style>
+    
+    
+    <title>CashVille</title>
+    <!-- Let browser know website is optimized for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+
+
+    <div class="navbar-fixed">
+      <nav class=" grey darken-3">
+      <div class="container"></div>
+          <div class="nav-wrapper">
+            <a href="#" class="brand-logo">CashVille</a>
+            <a href="#" class="sidenav-trigger show-on-large right" data-target="mobile-nav">
+              <i class="material-icons">menu</i>
+            </a>
+           
+            <ul class="right hide-on-med-and-down ">
+           
+                <li><a href="home_cus.jsp">Available Products</a></li>
+      <li><a href="placeorder.html">Place Order</a></li>
+       <li><a href="feedback.html">Feedbacks</a></li>
+      <li><a href="reset_pass_1.html">Reset Password</a></li>
+        <li><a href="index.html">Logout</a></li>
+           
+            </ul>
+              
+        </div>
+        </div>
+      </nav>
+    </div>
+
+
+  
+    <ul class="sidenav grey lighten-2" id="mobile-nav">
+ <li>   <div class="user-view">
+    <div class=" background grey darken-3"></div>
+      <a href="#">
+          <img src="images/person2.jpg" alt="" class="circle">
+        </a>
+        <a href="#" class="name white-text">
+          Customer
+        </a>
+      
+    </div></li>
+    
+                <li><a href="home_cus.jsp">Available Products</a></li>
+      <li><a href="placeorder.html">Place Order</a></li>
+       <li><a href="feedback.html">Feedbacks</a></li>
+      <li><a href="reset_pass_1.html">Reset Password</a></li>
+        <li><a href="index.html">Logout</a></li>
+    </ul>
+  <section>
+
+
+<br>
+<section id="contact" class="section section-contact center scrollspy">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 m8 offset-m2">
+            <div class="card-panel z-depth-5">
+            
+               <h4><span class="grey-text">Feedback</span>Form <h4>
+               <br>
+               <br>
+                 <form action="Se_feedback" method="post" name="Form" onsubmit="return validate()">
+              <div class="input-field">
+                <input type="text" id="name" placeholder="Name" name="name"/>
+                <label for="name">Name</label>
+              </div>
+              <div class="input-field">
+                <input type="email" id="email" placeholder="email" name="email" />
+                <label for="email">Email</label>
+              </div>
+              <div class="input-field">
+                <input type="text" id="Phone" placeholder="Phone No." name="no" />
+                <label for="Phone ">Phone</label>
+              </div>
+              <div class="input-field">
+                <textarea
+                  class="materialize-textarea"
+                  id="Feedback"
+                  placeholder="Feedback" name="feedback" ></textarea>
+                <label for="Feedback">Feedback</label>
+              </div>
+             <input type="submit" value="Submit Feedback" class="btn"/> 	
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section>
+<center>
+<p class="flow-text black-text">CashVille &copy; 2018
+</p>
+</center>
+</section>
+ </footer>  
+            
+         
+
+    <!-- JavaScript at end of body for optimized loading -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+   
+ 
+
+   
+    <script>
+    function validate()
+    {
+  	  var a=document.forms["Form"]["name"].value;
+        var b=document.forms["Form"]["email"].value;
+        var c=document.forms["Form"]["no"].value;
+        var d=document.forms["Form"]["feedback"].value;
+
+        if (a==""|| b=="" || c==""||d=="")
+        {
+            alert("Please Fill All Required Field");
+            return false;
+        }
+       
+        return true;
+    }
+    
+    
+    
+
+      const sideNav = document.querySelector('.sidenav');
+      M.Sidenav.init(sideNav, {});
+
+      //slider
+      const slider = document.querySelector('.slider');
+      M.Slider.init(slider, {
+        indicators: false,
+        height: 600,
+        transition: 500,
+        interval: 5000
+      });
+
+      //autocomplete
+      const autocomplete = document.querySelector('.autocomplete');
+      M.Autocomplete.init(autocomplete, {
+        data: {
+          Gambia: null,
+          Kenya: null,
+          Tanzania: null,
+          Antarctica: null,
+          Aruta: null,
+          Florida: null,
+          California: null,
+          Europe: null
+        }
+      });
+    </script>
+  </body>
+</html>
