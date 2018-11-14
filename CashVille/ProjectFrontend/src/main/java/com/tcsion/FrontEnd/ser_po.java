@@ -30,7 +30,7 @@ if(id!=-1)
 
 		
 JOptionPane.showMessageDialog(null,"Product already exists...you can update its information.");
-	RequestDispatcher rd=request.getRequestDispatcher("add.jsp");
+	RequestDispatcher rd=request.getRequestDispatcher("add.html");
 	rd.forward(request,response);
 	}
 
@@ -38,7 +38,7 @@ else
 {
 	gd.addProduct(pname, punit, pprice,link);
 	JOptionPane.showMessageDialog(null,"Product has been successfully added");
-	RequestDispatcher rd=request.getRequestDispatcher("add.jsp");
+	RequestDispatcher rd=request.getRequestDispatcher("add.html");
 	rd.forward(request,response);
 }
 	}
